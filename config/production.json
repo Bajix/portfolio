@@ -1,0 +1,8 @@
+{
+  "env" : "production",
+  "port" : 3000,
+  "hostname" : "bajix.com",
+  "hosts" : {
+    "web" : "http://bajix.com"
+  }
+}

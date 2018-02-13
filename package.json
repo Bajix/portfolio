@@ -18,6 +18,13 @@
   "homepage": "https://github.com/Bajix/portfolio#readme",
   "dependencies": {
     "broccoli": "^1.1.4",
-    "broccoli-eyeglass": "^4.1.4"
+    "broccoli-eyeglass": "^4.1.4",
+    "compression": "^1.7.1",
+    "config": "^1.29.4",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "perish": "^1.0.1",
+    "serve-index": "^1.9.1",
+    "winston": "^2.4.0"
   }
 }

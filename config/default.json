@@ -1,0 +1,8 @@
+{
+  "env" : "development",
+  "port" : 3000,
+  "hostname" : "dev.bajix.com",
+  "hosts" : {
+    "web" : "http://dev.bajix.com:3000"
+  }
+}

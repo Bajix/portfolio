@@ -1,0 +1,8 @@
+{
+  "env" : "NODE_ENV",
+  "port" : "PORT",
+  "hostname" : "POD_IP",
+  "hosts" : {
+    "web" : "WEB_URI"
+  }
+}
