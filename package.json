@@ -1,0 +1,19 @@
+{
+  "name": "@bajix/portfolio",
+  "version": "1.0.0",
+  "description": "Personal website // Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bajix/portfolio.git"
+  },
+  "author": "Thomas Sieverding (Thomas@bajix.com)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Bajix/portfolio/issues"
+  },
+  "homepage": "https://github.com/Bajix/portfolio#readme"
+}
