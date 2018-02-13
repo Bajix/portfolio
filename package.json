@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Bajix/portfolio/issues"
   },
-  "homepage": "https://github.com/Bajix/portfolio#readme"
+  "homepage": "https://github.com/Bajix/portfolio#readme",
+  "dependencies": {
+    "broccoli": "^1.1.4",
+    "broccoli-eyeglass": "^4.1.4"
+  }
 }
