@@ -1,4 +1,6 @@
 const staticAssets = require('./static-assets.json'),
+  Handlebars  = require('express-handlebars'),
+  appMounts = require('./app-mounts.json'),
   compression = require('compression'),
   Index = require('serve-index'),
   winston = require('winston'),
@@ -9,8 +11,27 @@ const staticAssets = require('./static-assets.json'),
   fs = require('fs');
 
 const app = express();
+app.locals.env = env;
 
 app.use(compression());
+
+app.engine('stache', Handlebars({
+  extname: '.stache',
+  defaultLayout: false,
+  helpers: {
+    is: function( a, b, options ) {
+      return a === b ? options.fn() : options.inverse();
+    },
+    joinBase: function() {
+      let args = Array.prototype.slice.call(arguments, 0, -1);
+      args.unshift('/assets');
+      return path.join.apply(path, args);
+    }
+  }
+}));
+
+app.set('view engine', 'stache');
+app.set('views', path.join(__dirname, '../assets'));
 
 staticAssets.forEach((mountPath) => {
   let assetPath = path.join(__dirname, '../', mountPath),
@@ -24,6 +45,12 @@ staticAssets.forEach((mountPath) => {
       icons: true
     }));
   }
+});
+
+Object.keys(appMounts).forEach((mountPath) => {
+  app.use(mountPath, function( req, res ) {
+    res.render(appMounts[mountPath]);
+  });
 });
 
 app.use(morgan('tiny', {

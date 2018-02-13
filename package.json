@@ -22,6 +22,7 @@
     "compression": "^1.7.1",
     "config": "^1.29.4",
     "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
     "morgan": "^1.9.0",
     "perish": "^1.0.1",
     "serve-index": "^1.9.1",
